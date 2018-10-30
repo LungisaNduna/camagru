@@ -5,7 +5,7 @@ require_once("config/database.php");
 echo "<h1>THIS IS THE VIEW DETAILS PAGE</h1>";
 
 $sql = 'SELECT FROM user * WHERE uid="'.$_POST['logged_uid'].'"';
-$result = $db_conn->query($sql);
+$result = run_query($sql);
 
 foreach ($result as $row){
     $output = '<h2 style="text-align:center">User Profile</h2>
