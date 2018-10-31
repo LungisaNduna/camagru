@@ -15,7 +15,7 @@ $server_un = "root";
 $server_psw = "password";
 
 try {
-    $server_conn = new PDO("mysql:host=$server_name", $server_un, $server_psw);
+    $server_conn = new PDO("mysql:host=$server_name"; $server_un, $server_psw);
     $server_conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     if (!$server_conn)
     {
