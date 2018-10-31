@@ -26,3 +26,13 @@
     height: 60px;
     padding: 0vw 0vw;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:  rgb(204, 200, 200);
+    color: white;
+    text-align: center;
+}

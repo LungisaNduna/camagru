@@ -9,8 +9,7 @@ if (!isset($_SESSION['logged_in'])){
 <html>
     <head>
         <title>Camagru</title>
-        <link rel="stylesheet" href="stylesheets/navbar.css">
-        <link rel="stylesheet" href="stylesheets/footer.css">
+        <link rel="stylesheet" href="stylesheets/base.css">
     </head>
     <body>
         <?PHP include("format/navbar.php");

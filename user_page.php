@@ -9,9 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Camagru</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylesheets/navbar.css" />
+    <link rel="stylesheet" href="stylesheets/base.css" />
     <link rel="stylesheet" href="stylesheets/sign_up.css" />
-    <link rel="stylesheet" href="stylesheets/footer.css" />
     <script src="main.js"></script>
 </head>
 <body>
