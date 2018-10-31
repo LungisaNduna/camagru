@@ -44,7 +44,7 @@
             $mail_body .= "<p>Thank you for joining Camagru</p>";
             $mail_body .= "<p><i>We are most excited to see what you bring to the party</i></p>";
             $mail_body .= "<p>Before you start the sharing liking and everything please click on the link below to verify your account</p>";
-            $mail_body .= '<a href="http://localhost:8080/camagru/user_pages/verify_account.php?uid='.$uid.'">Join Us</a><br/>';
+            $mail_body .= '<a href="http://localhost:8080/camagru/user_pages/verify_account.php?ver_uid='.$uid.'">Join Us</a><br/>';
 
             echo "we have inserted the account<br/>".$mail_body."<br/>";
             send_mail($email, "Account Verification", $mail_body);

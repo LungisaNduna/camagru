@@ -9,7 +9,7 @@ $db_conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 function run_query($query) {
     $db_conn->prepare($query);
-    $query->execute();
+    $statement = $query->execute();
 
     if (explode(' ', $query)[0] == 'SELECT') {
         $data = $statement->fetchAll();
