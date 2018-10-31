@@ -5,7 +5,7 @@ $sql = "CREATE DATABASE camagruDB";
 if ($server_conn->exec($sql)) {
     echo "<p>Database created successfully</p><br/>";
 } else {
-    echo "<p>Error creating database: " . mysqli_error($conn)."</p><br/>";
+    echo "<p>Error creating database</p><br/>";
 }
 
 //create user table
@@ -23,7 +23,7 @@ $sql .= "PRIMARY KEY (`user_id`)) ENGINE = InnoDB;";
 if ($server_conn->exec($sql)) {
     echo "<p>User table created successfully in camagruDB</p><br/>";
 } else {
-    echo "<p>Error creating User table: " . mysqli_error($conn)."</p><br/>";
+    echo "<p>Error creating User table</p><br/>";
 }
 
 //create post table
@@ -40,7 +40,7 @@ $sql .= "PRIMARY KEY (`post_id`)) ENGINE = InnoDB;";
 if ($server_conn->exec($sql)) {
     echo "<p>Post table created successfully in camagruDB</p><br/>";
 } else {
-    echo "<p>Error creating Post table: " . mysqli_error($conn)."</p><br/>";
+    echo "<p>Error creating Post table</p><br/>";
 }
 
 //create overlay table
@@ -53,7 +53,7 @@ $sql .= "PRIMARY KEY (`overlay_id`)) ENGINE = InnoDB;";
 if ($server_conn->exec($sql)) {
     echo "<p>Overlay table created successfully in camagruDB</p><br/>";
 } else {
-    echo "<p>Error creating Overlay table: " . mysqli_error($conn)."</p><br/>";
+    echo "<p>Error creating Overlay table</p><br/>";
 }
 
 ?>
