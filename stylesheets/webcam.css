@@ -1,0 +1,57 @@
+.webcam {
+    width: 400px;
+    background-color: rgb(43, 129, 121);
+    border: 5px solid rgb(57, 131, 123);
+}
+
+.postbtns {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: blueviolet;
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+#capture_dis ,#finalize-btn ,#returnToWebcam-btn ,#post-final ,#returnToCanvas-btn {
+    display: none;
+}
+
+input{
+    width:100%;
+    margin: 5px auto;
+    font-size:18px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    padding:10px;
+    display:block;
+  }

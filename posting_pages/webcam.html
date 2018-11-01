@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h1>webcam.html has been loaded onto the page</h1>
+        <div class="webcam">
+            <video id="webcam_dis" width="400" height="300"></video>
+            <a href="#" class="postbtns" id="capture-btn">Take a Photo</a>
+            <canvas id="capture_dis" width="400" height="300"></canvas>
+            <a href="#" class="postbtns" id="finalize-btn">I Look Good</a>
+            <a href="#" class="postbtns" id="returnToWebcam-btn">Don't like it</a>
+            <form id="post-final" method="POST" action="posting_pages/post.php">
+                <img id="photo_dis" src="https://via.placeholder.com/400x300" alt="photo taken">
+                <input type="text" id="message" name="postmessage" placeholder="You can write a short message">
+                <button type="submit" id="post-btn" style="width:100%;">Post it</button>
+            </form>
+            <a href="#" class="postbtns" id="returnToCanvas-btn">go back</a>
+        </div>
+        <br/>
+        <br/>
+        <h1>end</h1>
+    </body>
+</html>

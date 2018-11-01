@@ -11,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/base.css" />
     <link rel="stylesheet" href="stylesheets/sign_up.css" />
-    <script src="main.js"></script>
 </head>
 <body>
     <?PHP include("format/navbar.php"); ?>
