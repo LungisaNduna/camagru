@@ -1,0 +1,43 @@
+THINGS TO DO LIST
+    -   SERVER
+        +       automated database setup        
+        -   1   automated database population
+
+    -   USER INTERACTION
+        +       create account
+        +       account verification
+        +       user sign in
+        -   2   change details
+        -   1   password reset
+    
+    -   POSTING
+        +       webcam create picture
+        -   2   upload file from computer
+        -   5   overlay editing
+        -   2   save post to database
+    
+    -   Viewing
+        -   3   view all posts
+        -   5   comment on a post
+        -   2   like a post
+
+    -   Notifications
+        -   5   email information to user email address
+
+total weight remaining  28.
+
+Tuesday
+    -   change detais
+    -   reset password
+    -   email notification
+Wednesday
+    -   upload file
+    -   save post
+    -   view all posts
+    -   comment and like with notifications
+Thursday
+    -   overlay editing before posting
+    -   automated database populationo
+Friday
+    -   fix bugs if exist
+    -   mark work
