@@ -51,12 +51,7 @@
             echo "<h1>email sent</h1>";
             
             //clear the post data to avoid someone grabbing the data
-            unset($_POST['first_name']);
-            unset($_POST['last_name']);
-            unset($_POST['user_id']);
-            unset($_POST['email']);
-            unset($_POST['psw']);
-            unset($_POST['re-psw']);
+            free_post_data();
 
             header('Location: ../index.php?alert=6');
         }

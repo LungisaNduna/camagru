@@ -17,6 +17,7 @@ if (!uid_psw_match($db_conn, $attempted_id, $attempted_psw)) {
 } else {
     $_SESSION['logged_in'] = true;
     $_SESSION['logged_uid'] = $attempted_id;
+    free_post_data();
     header("Location: ../index.php");
 }
 ?>

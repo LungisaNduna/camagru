@@ -26,6 +26,8 @@
             include("user_pages/change_details.php");
         else if ($_GET['user_action'] == 5)
             include("user_pages/logout.php");
+        else if ($_GET['user_action'] == 6)
+            include("user_pages/reset_password.html");
     ?>
     <?PHP include("format/footer.php"); ?>
 </body>
