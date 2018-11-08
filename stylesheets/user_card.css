@@ -1,0 +1,69 @@
+.band {
+    background-image: url(https://i.pinimg.com/originals/b0/51/86/b05186c2f5ff4a424abcba13428bcf50.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: auto;
+    width: 100%;
+    align-content: center;
+    min-height: 220px;
+    padding: 1%;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+  
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+p {
+    background-color: rgba(128, 128, 128, 0.2);
+    width: auto;
+}
+  
+.cardBtn {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  text-decoration: none;
+  font-size: 22px;
+  height: 5vw;
+  opacity: 0.6;
+}
+
+#editBtn {
+    background-color: blueviolet;
+    font-size: 2vw;
+    float: left;
+}
+
+#changePSW {
+    background-color: orange;
+    font-size: 1.7vw;
+    float: right;
+}
+  
+a:hover, a:hover {
+  opacity: 1;
+}
+
+/*<div class="card">
+    <h1>uid</h1>
+    <p class="fullname">fname</p>
+    <p>"email"</p>
+    <p>
+        <button class="cardBtn" id="editBtn">Edit</button>
+        <button class="cardBtn" id="changePSW">Change Password</button>
+    </p>
+</div>*/

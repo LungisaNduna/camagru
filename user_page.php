@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/base.css" />
     <link rel="stylesheet" href="stylesheets/sign_up.css" />
+    <link rel="stylesheet" href="stylesheets/user_card.css" />
 </head>
 <body>
     <?PHP include("format/navbar.php"); ?>
@@ -23,7 +24,7 @@
         else if ($_GET['user_action'] == 3)
             include("user_pages/view_details.php");
         else if ($_GET['user_action'] == 4)
-            include("user_pages/change_details.php");
+            include("user_pages/edit_details.php");
         else if ($_GET['user_action'] == 5)
             include("user_pages/logout.php");
         else if ($_GET['user_action'] == 6)
