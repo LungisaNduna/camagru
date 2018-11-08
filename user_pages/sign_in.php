@@ -17,7 +17,11 @@ if (!uid_psw_match($db_conn, $attempted_id, $attempted_psw)) {
 } else {
     $_SESSION['logged_in'] = true;
     $_SESSION['logged_uid'] = $attempted_id;
-    free_post_data();
+    unset($_POST['psw']);
     header("Location: ../index.php");
 }
+
+unset($_POST['psw']);
+unset($_POST['user_id']);
+
 ?>

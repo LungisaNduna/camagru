@@ -47,12 +47,4 @@ function    isverified($conn, $uid) {
     }
 }
 
-function    free_post_data() {
-    $logged_in_holder = $_POST['logged_in'];
-    $uid_holder = $_POST['logged_uid'];
-    $_POST = array();
-    $_POST['logged_in'] = $logged_in_holder;
-    $_POST['logged_uid'] = $uid_holder;
-}
-
 ?>
