@@ -24,7 +24,7 @@
         else if ($_GET['user_action'] == 3)
             include("user_pages/view_details.php");
         else if ($_GET['user_action'] == 4)
-            include("user_pages/edit_details.php");
+            include("user_pages/edit_details.html");
         else if ($_GET['user_action'] == 5)
             include("user_pages/logout.php");
         else if ($_GET['user_action'] == 6)

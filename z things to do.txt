@@ -7,8 +7,8 @@ THINGS TO DO LIST
         +       create account
         +       account verification
         +       user sign in
-        -   2   change details
-        -   1   password reset
+        +   2   change details
+        +   1   password reset
     
     -   POSTING
         +       webcam create picture
