@@ -21,6 +21,7 @@
     <?PHP
         include("posting_pages/webcam.html");
     ?>
+    <script src="posting_pages/camera.js"></script>
     <?PHP include("format/footer.php"); ?>
 </body>
     <script src="posting_pages/camera.js"></script>
