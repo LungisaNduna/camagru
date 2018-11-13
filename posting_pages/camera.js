@@ -41,8 +41,9 @@
         //some error display if the webcam isn't functioning properly;
     });
 
-    uploadedfile.addEventListener('change', function(ev){
-        var file = ev.target.file[0];
+    uploadedfile.addEventListener('change', function(ev) {
+        stepTwoDisplay('block');
+        var file = ev.target.files[0];
         var imageType = /image.*/;
         if (file.type.match(imageType)) {
             var reader = new FileReader();
@@ -50,6 +51,8 @@
             reader.onloadend = function(event) {
                 var tempImg = new Image();
                 tempImg.onload = function(ev) {
+                    canvas.height = ev.target.height;
+                    canvas.width = ev.target.width;
                     context.drawImage(ev.target, 0, 0);
                 }
                 tempImg.src = event.target.result;
@@ -57,7 +60,7 @@
             reader.readAsDataURL(file);
         }
         stepOneDisplay('none');
-        stepTwoDisplay('block');
+        
     });
 
     document.getElementById('capture-btn').addEventListener('click', function() {
