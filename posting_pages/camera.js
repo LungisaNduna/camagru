@@ -1,7 +1,31 @@
 (function() {
     var wc_display = document.getElementById('webcam_dis');
     var vendorURL = window.URL || window.webkitURL;
+    var canvas = document.getElementById('capture_dis');
+    var context = canvas.getContext('2d');
+    var photo = document.getElementById('photo_dis');
+    var uploadedfile = document.getElementById('uploadfile');
     
+    function stepOneDisplay(display) {
+        wc_display.style.display = display;
+        document.getElementById('capture-btn').style.display = display;
+        uploadedfile.style.display = display;
+        document.getElementById('steponetext').style.display = display;
+    }
+
+    function stepTwoDisplay(display) {
+        canvas.style.display = display;
+        document.getElementById('finalize-btn').style.display = display;
+        document.getElementById('returnToWebcam-btn').style.display = display;
+    }
+
+    function stepThreeDisplay(display) {
+        photo.style.display = display;
+        document.getElementById('post-final').style.display = display;
+        document.getElementById('post-btn').style.display = display;
+        document.getElementById('returnToCanvas-btn').style.display = display;
+    }
+
     navigator.getMedia =    navigator.getUserMedia ||
                             navigator.webkitGetUserMedia ||
                             navigator.mozGetUserMedia ||
@@ -11,54 +35,51 @@
         video: true,
         audio:false
     }, function(stream) {
-        //document.getElementById('webcam_display').src = vendorURL.createObjectURL(stream);
-        //document.getElementById('webcam_display').play();
         wc_display.src = vendorURL.createObjectURL(stream);
         wc_display.play();
     }, function (error) {
         //some error display if the webcam isn't functioning properly;
     });
 
-    var canvas = document.getElementById('capture_dis');
-    var context = canvas.getContext('2d');
-    var photo = document.getElementById('photo_dis');
+    uploadedfile.addEventListener('change', function(ev){
+        var file = ev.target.file[0];
+        var imageType = /image.*/;
+        if (file.type.match(imageType)) {
+            var reader = new FileReader();
+
+            reader.onloadend = function(event) {
+                var tempImg = new Image();
+                tempImg.onload = function(ev) {
+                    context.drawImage(ev.target, 0, 0);
+                }
+                tempImg.src = event.target.result;
+            }
+            reader.readAsDataURL(file);
+        }
+        stepOneDisplay('none');
+        stepTwoDisplay('block');
+    });
 
     document.getElementById('capture-btn').addEventListener('click', function() {
         context.drawImage(wc_display, 0, 0, 400, 300);
-        canvas.style.display = 'block';
-        document.getElementById('capture-btn').style.display = 'none';
-        wc_display.style.display = 'none';
-        document.getElementById('finalize-btn').style.display = 'block';
-        document.getElementById('returnToWebcam-btn').style.display = 'block';
+        stepOneDisplay('none');
+        stepTwoDisplay('block');
     });
 
     document.getElementById('returnToWebcam-btn').addEventListener('click', function() {
-        canvas.style.display = 'none';
-        document.getElementById('capture-btn').style.display = 'block';
-        wc_display.style.display = 'block';
-        document.getElementById('finalize-btn').style.display = 'none';
-        document.getElementById('returnToWebcam-btn').style.display = 'none';
+        stepOneDisplay('block');
+        stepTwoDisplay('none');
     });
 
     document.getElementById('finalize-btn').addEventListener('click', function() {
-        canvas.style.display = 'none';
         photo.setAttribute('src', canvas.toDataURL('image/png'));
-        photo.style.display = 'block';
-        document.getElementById('post-final').style.display = 'block';
-        document.getElementById('finalize-btn').style.display = 'none';
-        document.getElementById('returnToWebcam-btn').style.display = 'none';
-        document.getElementById('post-btn').style.display = 'block';
-        document.getElementById('returnToCanvas-btn').style.display = 'block';
+        stepThreeDisplay('block');
+        stepTwoDisplay('none');
     });
 
     document.getElementById('returnToCanvas-btn').addEventListener('click', function() {
-        canvas.style.display = 'block';
-        photo.style.display = 'none';
-        document.getElementById('post-final').style.display = 'none';
-        document.getElementById('finalize-btn').style.display = 'block';
-        document.getElementById('returnToWebcam-btn').style.display = 'block';
-        document.getElementById('post-btn').style.display = 'none';
-        document.getElementById('returnToCanvas-btn').style.display = 'none';
+        stepThreeDisplay('none');
+        stepTwoDisplay('block');
     });
 
 })();
