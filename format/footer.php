@@ -1,7 +1,10 @@
 <?PHP
 
 $footer = '<div class="footer">';
-$footer .= '<p>Footer</p>';
+if ($_SESSION['logged_in'])
+    $footer .= '<a href="createpost.php" id="createpost_link" style="float: left">new post</a>';
+else
+    $footer .= '<p style="float: left">Please sign in to post</p>';
 $footer .= '</div>';
 
 echo $footer;
