@@ -31,6 +31,7 @@ if ($server_conn->exec($sql)) {
 $sql = "CREATE TABLE `camagrudb`.`posts` ( ";
 $sql .= "`post_id` INT NOT NULL AUTO_INCREMENT , ";
 $sql .= "`pic_src` VARCHAR(255) NOT NULL , ";
+$sql .= "`message` TEXT NULL , ";
 $sql .= "`comments` TEXT NULL , ";
 $sql .= "`comment_count` INT NOT NULL DEFAULT '0' , ";
 $sql .= "`likes` TEXT NULL , ";

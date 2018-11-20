@@ -17,6 +17,7 @@
         canvas.style.display = display;
         document.getElementById('finalize-btn').style.display = display;
         document.getElementById('returnToWebcam-btn').style.display = display;
+        document.getElementById("overlay_options").style.display = display;
     }
 
     function stepThreeDisplay(display) {
@@ -68,6 +69,35 @@
         stepOneDisplay('none');
         stepTwoDisplay('block');
     });
+
+    /*function updateImage() {
+        if (document.getElementById('optDog').checked) {
+            alert("dog overlay picked");
+            loadOverlay("./posting_pages/overlays/dog.png");
+        }
+        else if (document.getElementById('optMin').checked) {
+            alert("minion overlay picked");
+            loadOverlay("./posting_pages/overlays/minion.png");
+        }
+        else if (document.getElementById('optXmas').checked) {
+            alert("christmas overlay picked");
+            loadOverlay("./posting_pages/overlays/christmas.png");
+        }
+    }*/
+
+    /*function loadOverlay(file) {
+        var olImg = new Image();
+
+        olImg.src = file;
+        alert("about to load"+file);
+        olImg.onload = function(ev) {
+            context.drawImage(ev.target, 0, 0)
+        }
+    }*/
+
+    
+
+    
 
     document.getElementById('returnToWebcam-btn').addEventListener('click', function() {
         stepOneDisplay('block');

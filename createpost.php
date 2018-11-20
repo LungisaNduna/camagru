@@ -11,7 +11,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/base.css" />
     <link rel="stylesheet" href="stylesheets/webcam.css" />
-    
+    <script>
+
+        function updateImage() {
+                        
+            if (document.getElementById('optDog').checked) {
+                alert("dog overlay picked");
+                loadOverlay("./posting_pages/overlays/dog.png", 0, 0, 20, 20);
+            }
+            else if (document.getElementById('optMin').checked) {
+                alert("minion overlay picked");
+                loadOverlay("./posting_pages/overlays/minions.png", 0, 0, 20, 20);
+            }
+            else if (document.getElementById('optXmas').checked) {
+                alert("christmas overlay picked");
+                loadOverlay("./posting_pages/overlays/christmas.png", 0, 0, 20, 20);
+            }
+        }
+
+        function loadOverlay(file, xPos, yPos, width, height) {
+            var canvas = document.getElementById('capture_dis');
+            var context = canvas.getContext('2d');
+            var olImg = new Image();
+
+            olImg.src = file;
+            alert(file);
+            olImg.onload = function(ev) {
+                context.drawImage(ev.target, xPos, yPos, width, height)
+            }
+            alert("load completed");
+        }
+    </script>
 </head>
 <body>
     <?PHP include("format/navbar.php"); echo "<br/><br/>"; ?>
