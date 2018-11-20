@@ -14,7 +14,12 @@
     <script>
 
         function updateImage() {
-                        
+            var canvas = document.getElementById('capture_dis');
+            var context = canvas.getContext('2d');
+            var ogImg = document.getElementById("ogHolder");
+
+            context.drawImage(ogImg, 0, 0);
+            
             if (document.getElementById('optDog').checked) {
                 loadOverlay("./posting_pages/overlays/dog.png", 0, 0, 100, 100);
             }

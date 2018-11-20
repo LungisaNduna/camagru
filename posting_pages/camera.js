@@ -4,6 +4,7 @@
     var canvas = document.getElementById('capture_dis');
     var context = canvas.getContext('2d');
     var photo = document.getElementById('photo_dis');
+    var originalImage = document.getElementById('ogHolder');
     var uploadedfile = document.getElementById('uploadfile');
     
     function stepOneDisplay(display) {
@@ -61,44 +62,16 @@
             reader.readAsDataURL(file);
         }
         stepOneDisplay('none');
-        
+        originalImage.setAttribute('src', canvas.toDataURL('image/png'));
     });
 
     document.getElementById('capture-btn').addEventListener('click', function() {
         context.drawImage(wc_display, 0, 0, 400, 300);
+        originalImage.setAttribute('src', canvas.toDataURL('image/png'));
         stepOneDisplay('none');
         stepTwoDisplay('block');
     });
-
-    /*function updateImage() {
-        if (document.getElementById('optDog').checked) {
-            alert("dog overlay picked");
-            loadOverlay("./posting_pages/overlays/dog.png");
-        }
-        else if (document.getElementById('optMin').checked) {
-            alert("minion overlay picked");
-            loadOverlay("./posting_pages/overlays/minion.png");
-        }
-        else if (document.getElementById('optXmas').checked) {
-            alert("christmas overlay picked");
-            loadOverlay("./posting_pages/overlays/christmas.png");
-        }
-    }*/
-
-    /*function loadOverlay(file) {
-        var olImg = new Image();
-
-        olImg.src = file;
-        alert("about to load"+file);
-        olImg.onload = function(ev) {
-            context.drawImage(ev.target, 0, 0)
-        }
-    }*/
-
-    
-
-    
-
+  
     document.getElementById('returnToWebcam-btn').addEventListener('click', function() {
         stepOneDisplay('block');
         stepTwoDisplay('none');
