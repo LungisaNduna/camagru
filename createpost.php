@@ -16,16 +16,13 @@
         function updateImage() {
                         
             if (document.getElementById('optDog').checked) {
-                alert("dog overlay picked");
-                loadOverlay("./posting_pages/overlays/dog.png", 0, 0, 20, 20);
+                loadOverlay("./posting_pages/overlays/dog.png", 0, 0, 100, 100);
             }
             else if (document.getElementById('optMin').checked) {
-                alert("minion overlay picked");
-                loadOverlay("./posting_pages/overlays/minions.png", 0, 0, 20, 20);
+                loadOverlay("./posting_pages/overlays/minions.png", -40, 0, 200, 200);
             }
             else if (document.getElementById('optXmas').checked) {
-                alert("christmas overlay picked");
-                loadOverlay("./posting_pages/overlays/christmas.png", 0, 0, 20, 20);
+                loadOverlay("./posting_pages/overlays/christmas.png", 0, 210, 500, 100);
             }
         }
 
@@ -35,11 +32,9 @@
             var olImg = new Image();
 
             olImg.src = file;
-            alert(file);
             olImg.onload = function(ev) {
                 context.drawImage(ev.target, xPos, yPos, width, height)
             }
-            alert("load completed");
         }
     </script>
 </head>
