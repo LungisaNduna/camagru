@@ -30,6 +30,6 @@ echo "<h1>RESET PASSWORD</h1>";
   unset($_POST['new_psw']);
   unset($_POST['re_psw']);
   echo "post cleared";
-    //header("Location: ../index.php");
+  header("Location: ../index.php");
 
 ?>

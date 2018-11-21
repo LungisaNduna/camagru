@@ -1,7 +1,9 @@
 <html>
     <body>
         <h1>webcam.html has been loaded onto the page</h1>
-        <div class="webcam">
+    
+        <div class="webcam" style="float:left; max-width: 500px;">
+     
             <video id="webcam_dis" width="400" height="300"></video>
             <a href="#" class="postbtns" id="capture-btn">Take a Photo</a>
             <p id="steponetext">-------------------OR-----------------------</p>
@@ -11,15 +13,23 @@
             <a href="#" class="postbtns" id="finalize-btn">I Look Good</a>
             <a href="#" class="postbtns" id="returnToWebcam-btn">Don't like it</a>
 
+            <img id="photo_dis" src="https://via.placeholder.com/400x300" alt="photo taken">
             <form id="post-final" method="POST" action="posting_pages/post.php">
-                <img id="photo_dis" src="https://via.placeholder.com/400x300" alt="photo taken">
+                <input type="text" id="imageAsText" name="imageURL">
                 <input type="text" id="message" name="postmessage" placeholder="You can write a short message">
                 <button type="submit" id="post-btn" style="width:100%;">Post it</button>
             </form>
             <a href="#" class="postbtns" id="returnToCanvas-btn">go back</a>
+
+            <img id="ogHolder" style="display: none;" src="https://via.placeholder.com/400x300">
+     
         </div>
-        <br/>
-        <br/>
-        <h1>end</h1>
+
+        <div id="overlay_options" style="float:left; background-color: blueviolet; min-width: 200px; margin-left: 2vw">
+                <input type="radio" name="overlay" id="optDog" onchange="updateImage()">Dog<br>
+                <input type="radio" name="overlay" id="optMin" onchange="updateImage()">Minions<br>
+                <input type="radio" name="overlay" id="optXmas" onchange="updateImage()">Christmas<br>
+        </div>
+    
     </body>
 </html>

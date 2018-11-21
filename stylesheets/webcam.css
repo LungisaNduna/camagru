@@ -42,7 +42,7 @@ button:hover {
   width: 50%;
 }
 
-#capture_dis ,#finalize-btn ,#returnToWebcam-btn ,#post-final ,#returnToCanvas-btn {
+#capture_dis, #photo_dis ,#overlay_options, #finalize-btn ,#returnToWebcam-btn ,#post-final ,#returnToCanvas-btn {
     display: none;
 }
 

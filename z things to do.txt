@@ -13,7 +13,11 @@ THINGS TO DO LIST
     -   POSTING
         +       webcam create picture
         +   2   upload file from computer
+<<<<<<< HEAD
         -   5   overlay editing
+=======
+        +   5   overlay editing
+>>>>>>> 69b14eee053de8b024580c6d234ad8701118c38a
         -   2   save post to database
     
     -   Viewing

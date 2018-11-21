@@ -4,6 +4,7 @@
     var canvas = document.getElementById('capture_dis');
     var context = canvas.getContext('2d');
     var photo = document.getElementById('photo_dis');
+    var originalImage = document.getElementById('ogHolder');
     var uploadedfile = document.getElementById('uploadfile');
     
     function stepOneDisplay(display) {
@@ -17,6 +18,7 @@
         canvas.style.display = display;
         document.getElementById('finalize-btn').style.display = display;
         document.getElementById('returnToWebcam-btn').style.display = display;
+        document.getElementById("overlay_options").style.display = display;
     }
 
     function stepThreeDisplay(display) {
@@ -24,6 +26,7 @@
         document.getElementById('post-final').style.display = display;
         document.getElementById('post-btn').style.display = display;
         document.getElementById('returnToCanvas-btn').style.display = display;
+        document.getElementById('imageAsText').style.display = 'none';
     }
 
     navigator.getMedia =    navigator.getUserMedia ||
@@ -60,15 +63,16 @@
             reader.readAsDataURL(file);
         }
         stepOneDisplay('none');
-        
+        originalImage.setAttribute('src', canvas.toDataURL('image/png'));
     });
 
     document.getElementById('capture-btn').addEventListener('click', function() {
         context.drawImage(wc_display, 0, 0, 400, 300);
+        originalImage.setAttribute('src', canvas.toDataURL('image/png'));
         stepOneDisplay('none');
         stepTwoDisplay('block');
     });
-
+  
     document.getElementById('returnToWebcam-btn').addEventListener('click', function() {
         stepOneDisplay('block');
         stepTwoDisplay('none');
@@ -76,6 +80,7 @@
 
     document.getElementById('finalize-btn').addEventListener('click', function() {
         photo.setAttribute('src', canvas.toDataURL('image/png'));
+        document.getElementById("imageAsText").value = canvas.toDataURL('image/png');
         stepThreeDisplay('block');
         stepTwoDisplay('none');
     });
