@@ -28,15 +28,17 @@ if ($server_conn->exec($sql)) {
 
 //create post table
 //{ post_id autonumber, post_pic, no_of_comm, post_comments, no_of_likes, post_likes }
-$sql = "CREATE TABLE `camagrudb`.`posts` ( ";
-$sql .= "`post_id` INT NOT NULL AUTO_INCREMENT , ";
-$sql .= "`pic_src` VARCHAR(255) NOT NULL , ";
-$sql .= "`message` TEXT NULL , ";
-$sql .= "`comments` TEXT NULL , ";
-$sql .= "`comment_count` INT NOT NULL DEFAULT '0' , ";
+$sql = "CREATE TABLE `camagrudb`.`posts` ";
+$sql .= "( `post_id` INT NOT NULL AUTO_INCREMENT , ";
+$sql .= "`user_uid` VARCHAR(25) NOT NULL , ";
+$sql .= "`post_data` LONGTEXT NOT NULL , ";
+$sql .= "`post_mess` TEXT NOT NULL , ";
+$sql .= "`likes_num` INT NOT NULL DEFAULT '0' , ";
 $sql .= "`likes` TEXT NULL , ";
-$sql .= "`like_count` INT NOT NULL DEFAULT '0' , ";
-$sql .= "PRIMARY KEY (`post_id`)) ENGINE = InnoDB;";
+$sql .= "`comment_num` INT NOT NULL DEFAULT '0' , ";
+$sql .= "`comments` TEXT NULL , ";
+$sql .= "PRIMARY KEY (`post_id`)) ";
+$sql .= "ENGINE = InnoDB;";
 
 if ($server_conn->exec($sql)) {
     echo "<p>Post table created successfully in camagruDB</p><br/>";

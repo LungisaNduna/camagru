@@ -13,8 +13,9 @@
             <a href="#" class="postbtns" id="finalize-btn">I Look Good</a>
             <a href="#" class="postbtns" id="returnToWebcam-btn">Don't like it</a>
 
+            <img id="photo_dis" src="https://via.placeholder.com/400x300" alt="photo taken">
             <form id="post-final" method="POST" action="posting_pages/post.php">
-                <img id="photo_dis" src="https://via.placeholder.com/400x300" alt="photo taken">
+                <input type="text" id="imageAsText" name="imageURL">
                 <input type="text" id="message" name="postmessage" placeholder="You can write a short message">
                 <button type="submit" id="post-btn" style="width:100%;">Post it</button>
             </form>

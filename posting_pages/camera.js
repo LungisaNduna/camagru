@@ -26,6 +26,7 @@
         document.getElementById('post-final').style.display = display;
         document.getElementById('post-btn').style.display = display;
         document.getElementById('returnToCanvas-btn').style.display = display;
+        document.getElementById('imageAsText').style.display = 'none';
     }
 
     navigator.getMedia =    navigator.getUserMedia ||
@@ -79,6 +80,7 @@
 
     document.getElementById('finalize-btn').addEventListener('click', function() {
         photo.setAttribute('src', canvas.toDataURL('image/png'));
+        document.getElementById("imageAsText").value = canvas.toDataURL('image/png');
         stepThreeDisplay('block');
         stepTwoDisplay('none');
     });
