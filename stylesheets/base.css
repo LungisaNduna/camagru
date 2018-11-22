@@ -7,7 +7,7 @@
     height: 65px;
 }
   
-.navbar a {
+.navbar a, .footer a {
     float: right;
     display: block;
     color: rgb(75, 146, 139);
@@ -17,7 +17,7 @@
     font-size: 20px;
 }
 
-.navbar a:hover {
+.navbar a:hover, .footer a:hover {
     background: #333;
     color: #f2f2f2;
 }
@@ -35,19 +35,4 @@
     background-color:  rgb(204, 200, 200);
     color: white;
     text-align: center;
-}
-
-.footer a {
-    float: right;
-    display: block;
-    color: rgb(75, 146, 139);
-    text-align: center;
-    padding: 25px 2vw;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.footer a:hover {
-    background: #333;
-    color: #f2f2f2;
 }
