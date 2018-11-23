@@ -46,9 +46,10 @@
             $mail_body .= "<p>Before you start the sharing liking and everything please click on the link below to verify your account</p>";
             $mail_body .= '<a href="http://localhost:8080/camagru/user_pages/verify_account.php?ver_uid='.$uid.'">Join Us</a><br/>';
 
-            echo "we have inserted the account<br/>".$mail_body."<br/>";
-            send_mail($email, "Account Verification", $mail_body);
-            echo "<h1>email sent</h1>";
+            echo "we have inserted the account<br/>";
+            //echo $mail_body."<br/>";
+            send_email($email, "Account Verification", $mail_body);
+            echo "<h1>email sent to $email</h1>";
             
             //clear the post data to avoid someone grabbing the data
             unset($_POST['first_name']);

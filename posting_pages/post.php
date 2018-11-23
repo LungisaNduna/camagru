@@ -11,9 +11,10 @@
     $sql = "INSERT INTO `posts` (`user_uid`, `post_data`, `post_mess`)";
     $sql .= " VALUES ('$user_uid', '$imgURL', '$mess')";
 
+    echo "about to execute $sql<br/>";
     $db_conn->exec($sql);
 
     echo "Have executed the sql";
-    header("Location: ../index.php");
+    header('Location: ../index.php');
 
 ?>

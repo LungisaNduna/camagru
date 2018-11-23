@@ -7,7 +7,7 @@
 
     function creatediv($postID, $posterUID, $imgData, $imgMess, $postLikeCount, $postCommentCount) {
         $output =   '<div>';
-        $output .=  '<a href="view.php?post_num='.$postID.'"><img src="" alt="" height="300" width="400"></a>';
+        $output .=  '<a href="view.php?post_num='.$postID.'"><img src="'.$imgData.'" alt="" height="300" width="400"></a>';
         $output .=  '<p style="float: left;">posted by <em>'.$posterUID.'</em></p>';
         $output .=  '<p style="float: right;">has '.$postLikeCount.' likes and '.$postCommentCount.' comments</p>';
         $output .=  '<p>'.$imgMess.'</p>';
