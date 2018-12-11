@@ -14,7 +14,6 @@
     echo "about to execute $sql<br/>";
     $db_conn->exec($sql);
 
-    echo "Have executed the sql";
-    header('Location: ../index.php');
+    header("Location: http://localhost:8080/camagru/index.php");
 
 ?>

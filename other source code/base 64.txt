@@ -1,0 +1,5 @@
+to encode it to base64 text use base64_encode();
+
+to decode from base64 use base64_decode();
+
+image data should be saved as 

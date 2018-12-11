@@ -18,6 +18,7 @@ $sql .= "`uid` VARCHAR(25) NOT NULL , ";
 $sql .= "`email` VARCHAR(100) NOT NULL , ";
 $sql .= "`psw` VARCHAR(255) NOT NULL , ";
 $sql .= "`verified` BOOLEAN NOT NULL DEFAULT FALSE , ";
+$sql .= "`notifications` BOOLEAN NOT NULL DEFAULT TRUE , ";
 $sql .= "PRIMARY KEY (`user_id`)) ENGINE = InnoDB;";
 
 if ($server_conn->exec($sql)) {
